@@ -35,5 +35,5 @@ export const LimitedContainer = styled.div`
   max-height: 280px;
   display: flex;
   justify-content: center;
-  background-color: blue;
+  flex-direction: column;
 `;
