@@ -19,10 +19,6 @@ export const BackgroundImage = styled.img`
   z-index: -1;
 `;
 
-export const LogoImage = styled.img`
-  width: 202px;
-`;
-
 export const TitleLogin = styled(Title)`
   color: #006397;
 `;
@@ -40,8 +36,8 @@ export const ContainerLogin = styled.div`
 
 export const LimitedContainer = styled.div`
   width: 100%;
-  max-width: 498px;
-  max-height: 280px;
+  max-width: 100%;
+  max-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
