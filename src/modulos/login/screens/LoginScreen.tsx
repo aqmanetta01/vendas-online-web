@@ -11,12 +11,11 @@ import {
   LimitedContainer,
   TitleLogin,
 } from '../styles/loginScreen.styles';
-import { UserType } from '../types/UserType';
 
 const loginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { postRequest, loading } = useRequests();
+  const { authRequest, loading } = useRequests();
 
   const handleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -27,7 +26,7 @@ const loginScreen = () => {
   };
 
   const handleLogin = () => {
-    postRequest<UserType>('http://localhost:8080/auth', {
+    authRequest({
       email: email,
       password: password,
     });

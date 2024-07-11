@@ -15,7 +15,6 @@ export const useNotification = () => {
         placement: 'bottomRight',
       });
     }
-    alert('Passou aqui');
   }, [notification]);
 
   return {
