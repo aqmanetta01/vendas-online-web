@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 
-import { ProductType } from '../../modulos/product/types/ProductType';
+import { ProductType } from '../types/ProductType';
 
 interface DataContext {
   products?: ProductType[];
