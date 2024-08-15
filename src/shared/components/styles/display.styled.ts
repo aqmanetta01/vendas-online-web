@@ -4,6 +4,6 @@ export const DisplayFlex = styled.div`
   display: flex;
 `;
 
-export const DisplayFlexJustifyRight = styled(DisplayFlex)`
-  justify-content: right;
+export const DisplayFlexJustifySpaceBetween = styled(DisplayFlex)`
+  justify-content: space-between;
 `;

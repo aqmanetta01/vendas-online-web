@@ -6,7 +6,7 @@ import Input from '../../../shared/components/inputs/input/input';
 import InputMoney from '../../../shared/components/inputs/inputMoney/inputMoney';
 import Select from '../../../shared/components/inputs/select/Select';
 import Screen from '../../../shared/components/screen/Screen';
-import { DisplayFlexJustifyRight } from '../../../shared/components/styles/display.styled';
+import { DisplayFlexJustifySpaceBetween } from '../../../shared/components/styles/display.styled';
 import { LimitedContainer } from '../../../shared/components/styles/limited.styled';
 import { URL_CATEGORY } from '../../../shared/constants/urls';
 import { MethodsEnum } from '../../../shared/enums/methods.enums';
@@ -86,7 +86,7 @@ const ProductInsert = () => {
               label: `${category.name}`,
             }))}
           />
-          <DisplayFlexJustifyRight>
+          <DisplayFlexJustifySpaceBetween>
             <LimitedContainer width={120}>
               <Button margin="0px 8px" danger onClick={handleOnClickCancel}>
                 Cancelar
@@ -102,7 +102,7 @@ const ProductInsert = () => {
                 Inserir produto
               </Button>
             </LimitedContainer>
-          </DisplayFlexJustifyRight>
+          </DisplayFlexJustifySpaceBetween>
         </LimitedContainer>
       </ProductInsertContainer>
     </Screen>
