@@ -12,6 +12,7 @@
     "test:cov": "jest --coverage"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.4.0",
     "antd": "^5.17.0",
     "axios": "^1.7.2",
     "localforage": "^1.10.0",

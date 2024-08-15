@@ -1,3 +1,3 @@
-import FirstScreen from './screens/firstScreen';
+import FirstScreen from './screens/FirstScreen';
 
 export default FirstScreen;
