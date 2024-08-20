@@ -5,12 +5,14 @@ import Input from '../../../shared/components/inputs/input/input';
 import InputMoney from '../../../shared/components/inputs/inputMoney/inputMoney';
 import Select from '../../../shared/components/inputs/select/Select';
 import Screen from '../../../shared/components/screen/Screen';
-import { DisplayFlexJustifySpaceBetween } from '../../../shared/components/styles/display.styled';
+import {
+  DisplayFlexJustifyBetween,
+  DisplayFlexJustifyCenter,
+} from '../../../shared/components/styles/display.styled';
 import { LimitedContainer } from '../../../shared/components/styles/limited.styled';
 import { useCategory } from '../../category/hooks/useCategory';
 import { useInsertProduct } from '../hooks/useInsertProduct';
 import { ProductRoutesEnum } from '../routes';
-import { ProductInsertContainer } from '../styles/productInsert.style';
 
 const ProductInsert = () => {
   const {
@@ -43,7 +45,7 @@ const ProductInsert = () => {
         },
       ]}
     >
-      <ProductInsertContainer>
+      <DisplayFlexJustifyCenter>
         <LimitedContainer width={400}>
           <Input
             onChange={(event) => onChangeInput(event, 'name')}
@@ -75,7 +77,7 @@ const ProductInsert = () => {
               label: `${category.name}`,
             }))}
           />
-          <DisplayFlexJustifySpaceBetween>
+          <DisplayFlexJustifyBetween>
             <LimitedContainer width={120}>
               <Button margin="0px 8px" danger onClick={handleOnClickCancel}>
                 Cancelar
@@ -91,9 +93,9 @@ const ProductInsert = () => {
                 Inserir produto
               </Button>
             </LimitedContainer>
-          </DisplayFlexJustifySpaceBetween>
+          </DisplayFlexJustifyBetween>
         </LimitedContainer>
-      </ProductInsertContainer>
+      </DisplayFlexJustifyCenter>
     </Screen>
   );
 };
