@@ -6,14 +6,12 @@ interface ProductState {
   products: ProductType[];
 }
 
-// Define the initial state using that type
 const initialState: ProductState = {
   products: [],
 };
 
 export const counterSlice = createSlice({
   name: 'productReducer',
-  // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
     setProductsAction: (state, action: PayloadAction<ProductType[]>) => {
