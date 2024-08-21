@@ -8,7 +8,7 @@ interface TooltipImageProps {
 
 const TooltipImage = ({ product }: TooltipImageProps) => {
   return (
-    <Tooltip tooltip={<ImageProduct> src{product.image}</ImageProduct>}>
+    <Tooltip tooltip={<ImageProduct src={product.image} />}>
       <span>{product.id}</span>
     </Tooltip>
   );
