@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import Input, { InputProps } from '../input/input';
+import Input, { InputProps } from '../input/Input';
 
 interface InputMoneyProps extends InputProps {
   value: number;

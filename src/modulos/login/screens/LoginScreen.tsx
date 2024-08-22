@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Button from '../../../shared/components/buttons/button/Button';
 import SVGLogo from '../../../shared/components/icons/SVGLogo';
-import Input from '../../../shared/components/inputs/input/input';
+import Input from '../../../shared/components/inputs/input/Input';
 import { useRequests } from '../../../shared/hooks/useRequests';
 import {
   BackgroundImage,
