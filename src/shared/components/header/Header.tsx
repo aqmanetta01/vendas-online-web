@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { logout } from '../../functions/connection/auth';
+import { HeaderTestIdEnum } from './enum/headerTestIdEnum';
 import { HeaderContainer, LogoExit } from './header.style';
-import { HeaderTestIdEnum } from './headerTestIdEnum';
 
 const Header = () => {
   const navigate = useNavigate();
