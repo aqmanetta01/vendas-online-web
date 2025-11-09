@@ -31,7 +31,7 @@ export const ContainerLogin = styled.div`
   width: 100%;
   height: 100vh;
   max-width: 500px;
-  padding: 22px;
+  padding: 0 22px;
 `;
 
 export const LimitedContainer = styled.div`
