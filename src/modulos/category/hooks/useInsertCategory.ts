@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +10,8 @@ import { CategoryRoutesEnum } from '../routes';
 
 export const useInsertCategory = () => {
   const navigate = useNavigate();
+  const { request } = useRequests();
+
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
   const [disabledButton, setDisabledButton] = useState(true);
@@ -16,23 +19,35 @@ export const useInsertCategory = () => {
   const { setCategories } = useCategoryReducer();
 
   useEffect(() => {
-    if (!name) {
-      setDisabledButton(true);
-    } else {
-      setDisabledButton(false);
-    }
+    setDisabledButton(!name);
   }, [name]);
 
   const insertCategory = async () => {
     setLoading(true);
-    const { request } = useRequests();
-    await request(URL_CATEGORY, MethodsEnum.POST, undefined, { name });
-    await request(URL_CATEGORY, MethodsEnum.GET, setCategories);
-    setLoading(false);
-    navigate(CategoryRoutesEnum.CATEGORY);
+
+    try {
+      await request(
+        URL_CATEGORY,
+        MethodsEnum.POST,
+        undefined,
+        { name }
+      );
+
+      await request(
+        URL_CATEGORY,
+        MethodsEnum.GET,
+        setCategories
+      );
+
+      navigate(CategoryRoutesEnum.CATEGORY);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleOnChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOnChangeName = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setName(event.target.value);
   };
 

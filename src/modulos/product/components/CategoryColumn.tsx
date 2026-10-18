@@ -1,3 +1,4 @@
+
 import { Tag } from 'antd';
 
 import { CategoryType } from '../../../shared/types/CategoryType';
@@ -24,7 +25,9 @@ const categoryColumn = ({ category }: CategoryColumnProps) => {
   if (!category) {
     return null;
   }
-  const currentColor = colors[category.id] + 1 || colors[0];
+
+  const currentColor = colors[(category.id - 1) % colors.length];
+
   return <Tag color={currentColor}>{category.name}</Tag>;
 };
 
